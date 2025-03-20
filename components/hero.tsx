@@ -1,9 +1,10 @@
 "use client"
 
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { FiArrowRight, FiLinkedin, FiMail, FiPhone } from "react-icons/fi"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Hero() {
   return (
@@ -141,8 +142,15 @@ export default function Hero() {
             <div className="relative w-full h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 backdrop-blur-sm border border-primary/10">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="w-48 h-48 rounded-full bg-primary/10 mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-5xl font-bold text-primary">AM</span>
+                  <div className="w-48 h-48 rounded-full bg-primary/10 mx-auto mb-6 flex items-center justify-center overflow-hidden border-4 border-primary/20">
+                    <Image
+                      src="/assets/images/Angellina.jpeg"
+                      alt="Angella Mulikatete"
+                      width={192}
+                      height={192}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Angella Mulikatete</h3>
                   <p className="text-muted-foreground">Software Developer</p>

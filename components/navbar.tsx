@@ -1,11 +1,12 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 import { FiMenu, FiX } from "react-icons/fi"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import Link from "next/link"
+import { ThemeToggle } from "./theme-toggle"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -63,6 +64,9 @@ export default function Navbar() {
               </Link>
             </motion.div>
           ))}
+          <div className="ml-4">
+            <ThemeToggle />
+          </div>
         </nav>
 
         {/* Mobile Navigation */}
@@ -85,6 +89,9 @@ export default function Navbar() {
                     {item.name}
                   </Link>
                 ))}
+              </div>
+              <div className="py-4 flex justify-center">
+                <ThemeToggle />
               </div>
               <Button
                 variant="ghost"

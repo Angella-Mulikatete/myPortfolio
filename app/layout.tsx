@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Angella Mulikatete | Software Developer",
   description: "Portfolio website of Angella Mulikatete, a Software Developer specializing in web development.",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -30,6 +29,3 @@ export default function RootLayout({
   )
 }
 
-
-
-import './globals.css'
